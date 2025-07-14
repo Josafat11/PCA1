@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Predicción Titanic</title>
+</head>
+<body>
+    <h1>¿Sobreviviría en el Titanic?</h1>
+    <form method="post">
+        <label>Pclass (1-3):</label><input type="number" name="Pclass" required><br>
+        <label>Age:</label><input type="number" step="0.01" name="Age" required><br>
+        <label>SibSp:</label><input type="number" name="SibSp" required><br>
+        <label>Parch:</label><input type="number" name="Parch" required><br>
+        <label>Fare:</label><input type="number" step="0.01" name="Fare" required><br>
+        <label>Embarked (S=0, C=1, Q=2):</label><input type="number" name="Embarked" required><br>
+        <label>Deck (A=0, B=1, ..., U=8):</label><input type="number" name="Deck" required><br>
+        <label>Sex (male/female):</label><input type="text" name="Sex" required><br>
+        <input type="submit" value="Predecir">
+    </form>
+
+    {% if prediction %}
+        <h2>Resultado: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
